@@ -8,16 +8,14 @@ class HomeController extends BaseController {
   HomePresenter _presenter;
 
   List<User> get user => _user;
+  bool isLoading = true;
 
-  HomeController(userRepo) :
-    _presenter = HomePresenter(userRepo),
+  HomeController(this._presenter):
     super(){
       _load();
     }
 
-
   void _load(){
-    // super.onProgressLoading();
     _presenter.onGetUser();
   }
   @override
@@ -33,12 +31,18 @@ class HomeController extends BaseController {
     };
     _presenter.getUserOnComplete = () {
       print('User retrieved');
+      dismissLoading();
     };
 
     _presenter.getUserOnError = (e) {
       print(e);
     };
 
+  }
+
+  void dismissLoading(){
+    isLoading=false;
+    refreshUI();
   }
 
   @override
