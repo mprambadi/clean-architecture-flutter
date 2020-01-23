@@ -1,5 +1,6 @@
 import 'package:clean_architecture_flutter/app/ui/pages/main/view.dart';
 import 'package:clean_architecture_flutter/app/ui/pages/pages.dart';
+import 'package:clean_architecture_flutter/app/ui/pages/post/view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,8 @@ class Router {
     switch (settings.name) {
       case Pages.main:
         return _buildRoute(settings, MainPage());
+      case Pages.post:
+        return _buildRoute(settings, PostPage());
       default:
         return null;
     }
