@@ -12,10 +12,9 @@ class ApiService extends ApiServiceInterface {
   // EventBus _eventBus;
   // bool _needThrowError;
 
-  ApiService(Dio dio, EventBus eventBus) {
+  ApiService(Dio dio) {
     _dio = dio;
     // _eventBus = eventBus;
-    dio.options.baseUrl = Endpoints("https://jsonplaceholder.typicode.com").baseUrl;
   }
 
   // send http request
