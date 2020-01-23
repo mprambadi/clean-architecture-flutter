@@ -9,4 +9,8 @@ class Endpoints {
     return '/users';
   }
 
+  String post() {
+    return '/posts';
+  }
+
 }
