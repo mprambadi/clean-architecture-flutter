@@ -18,10 +18,11 @@ class _HomePageState extends ViewState<HomePage, HomeController> {
     List<Widget> usersList =
         controller.user.map((item) => Text(item.id.toString())).toList();
     return Column(
+      key: globalKey,
       children: <Widget>[
         RaisedButton(
-          onPressed: () {},
-          child: Text("hello"),
+          onPressed: () => controller.pindahPost(),
+          child: Text("Pindah Post"),
         ),
         controller.isLoading
             ? CircularProgressIndicator(backgroundColor: Colors.red)
