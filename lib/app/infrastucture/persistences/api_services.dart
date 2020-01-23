@@ -1,10 +1,7 @@
 import 'dart:convert';
 import 'dart:async';
 
-import 'package:clean_architecture_flutter/app/infrastucture/endpoint.dart';
-import 'package:clean_architecture_flutter/app/infrastucture/events/dio_error.dart';
 import 'package:dio/dio.dart';
-import 'package:event_bus/event_bus.dart';
 import 'package:clean_architecture_flutter/data/infrastructures/api_services_interface.dart';
 
 class ApiService extends ApiServiceInterface {
