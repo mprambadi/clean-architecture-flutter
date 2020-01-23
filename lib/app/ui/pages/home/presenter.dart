@@ -9,7 +9,7 @@ class HomePresenter extends Presenter {
 
   final GetUserUseCase _getUserUseCase;
 
-  HomePresenter(userRepo): _getUserUseCase = GetUserUseCase(userRepo);
+  HomePresenter(this._getUserUseCase);
 
   void onGetUser({Map<String, String> params = const {}}) {
     _getUserUseCase.execute(_GetUserObserver(this));
