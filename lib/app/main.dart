@@ -1,12 +1,14 @@
+import 'package:clean_architecture_flutter/app/infrastucture/app_component.dart';
 import 'package:clean_architecture_flutter/app/infrastucture/events/dio_error.dart';
 import 'package:clean_architecture_flutter/app/infrastucture/events/reset_ui.dart';
 import 'package:clean_architecture_flutter/app/infrastucture/router.dart';
-import 'package:clean_architecture_flutter/app/misc/constants.dart';
-import 'package:clean_architecture_flutter/app/ui/pages/main/view.dart';
 import 'package:event_bus/event_bus.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  AppComponent.init();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
