@@ -1,7 +1,8 @@
 import 'package:clean_architecture_flutter/app/infrastucture/contracts/base_controller.dart';
 import 'package:clean_architecture_flutter/app/ui/pages/home/presenter.dart';
+import 'package:clean_architecture_flutter/app/ui/pages/pages.dart';
 import 'package:clean_architecture_flutter/domains/entities/user.dart';
-import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomeController extends BaseController {
   List<User> _user = List<User>();
@@ -38,6 +39,10 @@ class HomeController extends BaseController {
       print(e);
     };
 
+  }
+
+  void pindahPost(){
+    Navigator.pushNamed(getContext(),Pages.post);
   }
 
   void dismissLoading(){
